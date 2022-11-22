@@ -24,7 +24,7 @@ int _puts_2(char *s)
 	int i;
 
 	if (s == NULL)
-		s = "(nil)";
+		s = "";
 
 	for (i = 0; s[i]; i++)
 		_putchar(s[i]);
