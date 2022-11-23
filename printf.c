@@ -44,7 +44,7 @@ int _printf(const char * const format, ...)
 			}
 		}
 		else
-			count += _putchar('%');
+			count += _putchar(format[i]);
 		/*end-if*/
 	/*end-for*/
 	va_end(args);
