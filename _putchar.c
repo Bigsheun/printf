@@ -47,7 +47,8 @@ int _print_num(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		N = -n;
+		n = n * -1;
 		count = 1;
 	}
 
