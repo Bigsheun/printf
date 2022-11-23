@@ -1,21 +1,24 @@
 #include "main.h"
 #include <unistd.h>
 #include <stdio.h>
+
 /**
 * _putchar - output a chatacter
 * @c: character
+* Return: always 1 (number of char printed)
 */
-void _putchar(char c)
+int _putchar(char c)
 {
 	char buf[2];
 
 	buf[0] = c;
 	write(1, buf, 1);
+	return (1);
 }
 
 /**
-* _puts_2 - works like puts, only it prints (nil) if NULL
-* @s: String to print
+* _puts_2 - works like puts
+`* @s: String to print
 *
 * Return: number of characters printed
 */
@@ -28,10 +31,14 @@ int _puts_2(char *s)
 
 	for (i = 0; s[i]; i++)
 		_putchar(s[i]);
-
 	return (i);
 }
 
+/**
+* _print_num - program print number wit only _putchar
+* @n: integer
+* Return: number of characters printed
+*/
 int _print_num(int n)
 {
 	unsigned int N;
