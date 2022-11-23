@@ -46,10 +46,9 @@ int _print_num(int n)
 
 	if (n < 0)
 	{
-		_putchar('-');
+		count += _putchar('-');
 		N = -n;
 		n = n * -1;
-		count = 1;
 	}
 
 	N = n;
