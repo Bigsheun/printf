@@ -34,14 +34,9 @@ int _printf(const char * const format, ...)
 				count += _puts_2(va_arg(args, char *));
 			else if (spec == 'd' || spec == 'i')
 				count += _print_num(va_arg(args, int));
-			else
-			{
+			else  if (spec == '%')
 				count += _putchar('%');
-				if (spec && spec != '%')
-				{
-					count += _putchar('%');
-				}
-			}
+			/*endif*/
 		}
 		else
 			count += _putchar(format[i]);
