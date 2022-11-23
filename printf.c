@@ -6,6 +6,7 @@
 
 #include "main.h"
 #include <stdarg.h>
+#include <stdlib.h>
 
 /**
 * _printf - custom printf function
