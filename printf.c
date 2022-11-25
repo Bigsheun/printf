@@ -32,8 +32,18 @@ int _printf(const char * const format, ...)
 				count += _putchar(va_arg(args, int));
 			else if (spec == 's')
 				count += _puts_2(va_arg(args, char *));
-			else if (spec == 'd' || spec == 'i')
+			else if (spec == 'd' || spec == 'i' )
 				count += _print_num(va_arg(args, int));
+			else if (spec == 'u')
+				count += _print_u_num(va_arg(args, int));
+			else if (spec == 'p')
+				count += print_address(va_arg(args, int));
+			else if (spec == 'b')
+				count += _print_bin_num(va_arg(args, int));
+			else if (spec == 'o')
+				count += _print_oct_num(va_arg(args, int));
+			else if (spec == 'x' || spec == 'X')
+				count += _print_Hexes_num(va_arg(args, int),spec);
 			else
 				count += _putchar(spec);
 			/*endif*/
