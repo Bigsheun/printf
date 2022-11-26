@@ -24,7 +24,7 @@ int _print_bin_num(int n)
 }
 
 /**
-* _print_bin_num - program print octal number
+* _print_oct_num - program print octal number
 * using only _putchar
 * @n: integer
 * Return: number of characters printed
@@ -45,7 +45,7 @@ int _print_oct_num(int n)
 }
 
 /**
-* _print_bin_num - program print hexadecimal number
+* _print_hex_num - program print hexadecimal number
 * using only _putchar
 * @n: integer
 * Return: number of characters printed
@@ -55,8 +55,8 @@ int _print_hex_num(int n)
 	unsigned int N;
 	int count = 0;
 	char hex_symbols[17] = "0123456789abcdef";
-	N = n;
 
+	N = n;
 	if (N / 16)
 		count += _print_hex_num(N / 16);
 
@@ -66,7 +66,7 @@ int _print_hex_num(int n)
 }
 
 /**
-* _print_bin_num - program print HEXAdecimal numbera
+* _print_HEX_num - program print HEXAdecimal numbera
 * using capital letters
 * using only _putchar
 * @n: integer
@@ -77,8 +77,8 @@ int _print_HEX_num(int n)
 	unsigned int N;
 	int count = 0;
 	char hex_symbols[17] = "0123456789ABCDEF";
-	N = n;
 
+	N = n;
 	if (N / 16)
 		count += _print_HEX_num(N / 16);
 
@@ -88,7 +88,7 @@ int _print_HEX_num(int n)
 }
 /**
 * _print_Hexes_num - decides which print_HeX to call
-* @n: value to print 
+* @n: value to print
 * @spec: String to help decide
 * Return: number of characters printed
 */

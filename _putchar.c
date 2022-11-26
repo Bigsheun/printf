@@ -63,7 +63,7 @@ int _print_num(int n)
 
 
 /**
-* _print_u_num - program print unsigned 
+* _print_u_num - program print unsigned
 * number wit only _putchar
 * @N: unsigned integer
 * Return: number of characters printed
@@ -92,7 +92,8 @@ int _print_u_num(unsigned int N)
 int print_address(unsigned int n)
 {
 	int count;
-	count = _puts_2("0x") + _print_hex_num(n);
+
+	count = _print_hex_num(n);
 
 	return (count);
 }
