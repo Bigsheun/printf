@@ -24,14 +24,21 @@ int _putchar(char c)
 */
 int _puts_2(char *s)
 {
-	int i;
+	int i, Kount = 0;
 
 	if (s == NULL)
 		s = "(null)";
 
 	for (i = 0; s[i]; i++)
-		_putchar(s[i]);
-	return (i);
+		if (s[i] < 32 || s[i] >= 127)
+		{
+			Kount += _puts_2("\\x");
+			Kount += _print_HEX_num(s[i]);
+		}
+		else
+			Kount += _putchar(s[i]);
+
+	return (Kount);
 }
 
 /**
@@ -83,7 +90,6 @@ int _print_u_num(unsigned int N)
 /**
 * print_address - print address (0x Hex-number)
 * @n: number (address) to print
-* @argv: array of command-line strings
 *
 * Description: Longer multiline
 * section header: Section description
