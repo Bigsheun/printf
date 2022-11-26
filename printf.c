@@ -44,7 +44,7 @@ int _printf(const char * const format, ...)
 				count += _print_oct_num(va_arg(args, int));
 			else if (spec == 'x' || spec == 'X')
 				count += _print_Hexes_num(va_arg(args, int),spec);
-			else
+			else if (spec != '\0')
 				count += _putchar(spec);
 			/*endif*/
 		}
