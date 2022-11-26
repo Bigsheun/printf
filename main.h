@@ -12,4 +12,5 @@ int _print_oct_num(int n);
 int _print_hex_num(int n);
 int _print_HEX_num(int n);
 int _print_Hexes_num(int n, char spec);
+int _puts_3(char *s);
 #endif

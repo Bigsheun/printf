@@ -17,34 +17,9 @@ int _putchar(char c)
 }
 
 /**
-* _puts_2 - works like puts
-`* @s: String to print
-*
-* Return: number of characters printed
-*/
-int _puts_2(char *s)
-{
-	int i, Kount = 0;
-
-	if (s == NULL)
-		s = "(null)";
-
-	for (i = 0; s[i]; i++)
-		if (s[i] < 32 || s[i] >= 127)
-		{
-			Kount += _puts_2("\\x");
-			Kount += _print_HEX_num(s[i]);
-		}
-		else
-			Kount += _putchar(s[i]);
-
-	return (Kount);
-}
-
-/**
 * _print_num - program print number wit only _putchar
 * @n: integer
-* Return: number of characters printed
+* Return: number of characters printed Ss
 */
 int _print_num(int n)
 {

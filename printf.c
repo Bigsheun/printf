@@ -32,6 +32,8 @@ int _printf(const char * const format, ...)
 				count += _putchar(va_arg(args, int));
 			else if (spec == 's')
 				count += _puts_2(va_arg(args, char *));
+			else if (spec == 'S')
+				count += _puts_3(va_arg(args, char *));
 			else if (spec == 'd' || spec == 'i')
 				count += _print_num(va_arg(args, int));
 			else if (spec == 'u')
@@ -46,11 +48,9 @@ int _printf(const char * const format, ...)
 				count += _print_Hexes_num(va_arg(args, int), spec);
 			else if (spec != '\0')
 				count += _putchar(spec);
-			/*endif*/
 		}
 		else
 			count += _putchar(format[i]);
-		/*end-if*/
 	/*end-for*/
 	va_end(args);
 	return (count);
