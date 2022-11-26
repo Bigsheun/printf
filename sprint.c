@@ -19,6 +19,8 @@ int _puts_3(char *s)
 		if ((s[i] > 0 && s[i] < 32) || s[i] >= 127)
 		{
 			Kount += _puts_2("\\x");
+			if (s[i] < 16)
+				Kount += _puts_2("0");
 			Kount += _print_HEX_num(s[i]);
 		}
 		else
